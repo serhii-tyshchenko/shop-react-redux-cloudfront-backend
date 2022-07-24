@@ -1,0 +1,22 @@
+{
+  "name": "shop-react-redux-cloudfront-backend",
+  "version": "1.0.0",
+  "description": "API for the shop-react-redux-cloudfront",
+  "main": "index.js",
+  "scripts": {
+    "sls:deploy": "sls deploy --stage dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serhii-tyshchenko/shop-react-redux-cloudfront-backend.git"
+  },
+  "author": "Serhii Tyshchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serhii-tyshchenko/shop-react-redux-cloudfront-backend/issues"
+  },
+  "homepage": "https://github.com/serhii-tyshchenko/shop-react-redux-cloudfront-backend#readme",
+  "devDependencies": {
+    "serverless-auto-swagger": "^2.8.2"
+  }
+}

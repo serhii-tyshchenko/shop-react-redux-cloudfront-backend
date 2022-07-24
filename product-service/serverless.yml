@@ -1,0 +1,35 @@
+service: product-service
+
+frameworkVersion: '3'
+
+configValidationMode: error
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+  stage: dev
+  region: eu-west-1
+
+functions:
+  getProductList:
+    handler: handler.getProductList
+    events:
+      - httpApi:
+          path: /product
+          method: get
+  getProductById:
+    handler: handler.getProductById
+    events:
+      - httpApi:
+          path: /product/{productId}
+          method: get
+plugins:
+  - serverless-auto-swagger
+custom:
+  autoswagger:
+    title: 'Product Service API'
+    apiType: 'httpApi'
+    generateSwaggerOnDeploy: true
+    typefiles: ['./types/products.d.ts']
+    schemes: ['https']
